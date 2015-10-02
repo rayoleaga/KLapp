@@ -8,6 +8,8 @@ var morgan = require('morgan');
 var mongoose = require('mongoose');
 var User = require('./app/models/user');
 var Event = require('./app/models/event');
+var jwt = require('jsonwebtoken');
+var superSecret = 'klrhodeislandsingeranddiva';
 var port = process.env.PORT || 8080;
 
 // APP CONFIGURATION
@@ -39,10 +41,81 @@ app.get('/', function(req, res){
 // get an instance of the express routes
 var apiRouter = express.Router();
 
+// route for authenticating users
+apiRouter.post('/authenticate', function(req, res){
+	// find user
+	// select the name username and password explicitly
+	User.findOne({
+		username: req.body.username
+	}).select('name username password').exec(function(err, user){
+		if(err) throw err;
+
+		// no user with that username was found
+		if(!user){
+			res.json({
+				success: false,
+				message: "Authentication failed. User not found."
+			});
+		} else if(user){
+
+			// check if password mathchs
+			var validPassword = user.comparePassword(req.body.password);
+			if(!validPassword){
+				res.json({
+					success: false,
+					message: "Authentication failed. Wrong password"
+				});
+			} else {
+			// if user is found and password is right
+			// create a token
+			var token = jwt.sign({
+				name: user.name,
+				username: user.username,
+
+			}, superSecret,{
+				expiresInMinutes: 1440 // expires in 24 hours
+			});
+			res.json({
+				success: true,
+				message: "Enjoy your token!",
+				token: token
+			});
+		}
+		}
+	
+	});
+});
+
+
+
 // midddleware to use for all request
 apiRouter.use(function(req, res, next){
+	// check header our url parameters or post parameters for token
+	var token = req.body.token || req.query.token || req.headers['x-access-token'];
+	// decode token
+	if(token){
+		// verifies secret and checks exp
+		jwt.verify(token, superSecret, function(err, decoded){
+			if(err){
+				return res.status(403).send({
+					success: false,
+					message: "Failed to authenticate token."
+				});
+			} else {
+				// if everything is good, save to request for use in other routes
+				req.decoded = decoded;
+				next();
+			}
+		});
+	} else {
+		// if there is no token
+		// return an HTTP response of 403 (access forbidden) and error message
+		return res.status(403).send({
+			success: false,
+			message: "No token provided."
+		});
+	}
 	console.log("Somebody just came to our app!!");
-	next();
 });
 ////////////////////USERS ROUTES/////////////////////////
 // on routes that en in /users
@@ -117,6 +190,10 @@ apiRouter.route('/users/:user_id')
 			res.json({message: "Succesfully deleted"})
 		});
 	});
+
+	apiRouter.get('/me', function(req, res){
+	res.send(req.decoded);
+	});
 	////////////////////ENDS USERS ROUTES/////////////////////////
 
 ////////////////////EVENTS ROUTES/////////////////////////
@@ -190,7 +267,10 @@ apiRouter.route('/events/:event_id')
 			if(err) return res.send(err);
 			res.json({message: "Succesfully deleted"});
 		});
-	})
+	});
+
+
+
 //////////////////// ENDS EVENTS ROUTES/////////////////////////
 // test route to make sure everything is working
 apiRouter.get('/', function(req, res){
@@ -202,4 +282,4 @@ app.use('/api', apiRouter);
 
 //START SERVER
 app.listen(port);
-console.log("Magiv happens on port" + port);
+console.log("Magic happens on port" + port);
