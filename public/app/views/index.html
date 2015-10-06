@@ -59,14 +59,23 @@
 </header>
 
 <div class="dark-container">
-<div class="container main-header">
-	<span class="fa fa-bars"></span>
+<div class="container menu-icon-header-container">
+	<span class="fa fa-bars" id="menu-icon"></span>
 </div>
-	
-
 	<h2>KELLEY LENNON</h2>
-
 </div>
+	<!-- menu sidebar -->
+<div class="kl-nav-container" id="menu-sidebar">
+<i class="fa fa-times" id="close-menubar"></i>
+	<ul class="main-menu">
+		<li><i class="fa fa-calendar-o"></i></li>
+		<li><i class="fa fa-camera"></i></li>
+		<li><i class="fa fa-play-circle"></i></li>
+		<li><i class="fa fa-headphones"></i></li>
+	</ul>
+</div>
+
+
 	<!-- ANGULAR VIEWS -->
 	<div ng-view></div>
 
