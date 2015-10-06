@@ -2,6 +2,19 @@ h1,h2,h3,h4,h5,h6{
 	font-family: 'Palanquin', sans-serif;
 }
 
+/*MENU*/
+.main-header{
+	color: #fff;
+}
+.fa-bars{
+
+	text-align: right;
+	display: block;
+	margin: 20px auto;
+	font-size: 2.0em;
+	cursor: pointer;
+}
+
 .main-container{
 	margin: 0 auto;
 	text-align: center;
