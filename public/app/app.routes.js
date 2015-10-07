@@ -17,6 +17,28 @@ angular.module('app.routes', ['ngRoute'])
 			controllerAs: 'login'
 		})
 
+		.when('/events',{
+			templateUrl:'app/views/pages/home.html',
+			controller: 'eventController',
+			controllerAs: 'event'
+		})
+
+		.when('/videos',{
+			templateUrl: 'app/views/pages/videos.html',
+			controller: 'videoController',
+			controllerAs: 'video'
+
+
+		})
+
+			.when('/photos',{
+			templateUrl: 'app/views/pages/photos.html',
+			controller: 'photoController',
+			controllerAs: 'photo'
+
+
+		})
+
 				// show all users
 		.when('/users', {
 			templateUrl: 'app/views/pages/users/all.html',

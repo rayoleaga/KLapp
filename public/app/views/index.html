@@ -9,22 +9,28 @@
 	<!-- load angular and angular-route via CDN -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
-	
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-animate.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
 
 	<script src="assets/js/ui.js"></script>
+
+
 
 	<!-- controllers -->
 	<script src="app/controllers/mainCtrl.js"></script>
 	<script src="app/controllers/userCtrl.js"></script>
 	<script src="app/controllers/eventCtrl.js"></script>
+	<script src="app/controllers/videoCtrl.js"></script>
+	<script src="app/controllers/photoCtrl.js"></script>
 
 	<!-- services -->
 	<script src="app/services/authService.js"></script>
 	<script src="app/services/userService.js"></script>
 	<script src="app/services/eventService.js"></script>
+	<script src="app/services/videoService.js"></script>
+	<script src="app/services/photoService.js"></script>
 
 	<!-- main Angular app files -->
 	<script src="app/app.routes.js"></script>
@@ -68,9 +74,9 @@
 <div class="kl-nav-container" id="menu-sidebar">
 <i class="fa fa-times" id="close-menubar"></i>
 	<ul class="main-menu">
-		<li><i class="fa fa-calendar-o"></i></li>
-		<li><i class="fa fa-camera"></i></li>
-		<li><i class="fa fa-play-circle"></i></li>
+		<li><a href="/events"><i class="fa fa-calendar-o"></i></a></li>
+		<li><a href="/photos"><i class="fa fa-camera"></i></a></li>
+		<li><a href="/videos"><i class="fa fa-play-circle"></i></a></li>
 		<li><i class="fa fa-headphones"></i></li>
 	</ul>
 </div>

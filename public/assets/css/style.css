@@ -2,6 +2,15 @@ h1,h2,h3,h4,h5,h6, p{
 	font-family: 'Palanquin', sans-serif;
 }
 
+.med-container{
+	
+	margin: 0 auto;
+}
+
+.text-center{
+	text-align: center;
+}
+
 /*MENU*/
 .menu-icon-header-container{
 	color: #fff;
@@ -52,12 +61,15 @@ h1,h2,h3,h4,h5,h6, p{
 	padding: 0px;
 }
 
-.main-menu li{
+.main-menu li,
+#videos-list li{
 	
 	list-style-type: none;
 	border-bottom: 1px solid #474545;
 	
 }
+
+
 
 .fa-calendar-o,
 .fa-camera,
@@ -69,7 +81,37 @@ h1,h2,h3,h4,h5,h6, p{
 
 }
 
-/*//////////////*/
+/*///////VIDEOS///////*/
+
+#videos-list #video-title span.fa-play-circle{
+	color: red;
+}
+
+
+.video-player,
+#video-title {
+	display: inline-block;
+	width: 40%;
+	vertical-align: top;
+	margin: 20px;
+}
+
+
+#videos-list{
+	overflow: scroll;
+	height: 360px;
+
+-webkit-box-shadow: inset 0px -48px 41px -51px rgba(26,26,26,0.33);
+-moz-box-shadow: inset 0px -48px 41px -51px rgba(26,26,26,0.33);
+box-shadow: inset 0px -48px 41px -51px rgba(26,26,26,0.33);
+}
+
+.video-player{
+	margin: 20px;
+	text-align: center;
+	
+}
+
 
 .main-container{
 	margin: 0 auto;
@@ -88,13 +130,11 @@ h1,h2,h3,h4,h5,h6, p{
 	background-repeat: no-repeat;
 	display: inline-block;
 
-	-webkit-box-shadow: inset 0px -11px 7px -1px rgba(0,0,0,0.18);
-	-moz-box-shadow: inset 0px -11px 7px -1px rgba(0,0,0,0.18);
-	box-shadow: inset 0px -11px 7px -1px rgba(0,0,0,0.18);
-
 	-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 89%, 53% 89%, 50% 93%, 47% 89%, 0 89%);
 	clip-path: polygon(0% 0%, 100% 0%, 100% 89%, 53% 89%, 50% 93%, 47% 89%, 0 89%);
 }
+
+
 
 .dark-container h2{
 	color: #fff;
@@ -102,10 +142,6 @@ h1,h2,h3,h4,h5,h6, p{
 	text-align: center;
 	letter-spacing: 10px;
 	margin-top: 200px;
-
-
-
-
 
 }
 
@@ -131,10 +167,13 @@ h1,h2,h3,h4,h5,h6, p{
 animation:slideInUp 1s both ease-in;
 }
 .ng-leave {
--webkit-animation:zoomOutDown 0.5s both ease-in;
--moz-animation:zoomOutDown 0.5s both ease-in;
-animation:zoomOutDown 0.5s both ease-in;
-}
+-webkit-animation:slideOutDown 1s both ease-in;
+-moz-animation:slideOutDown 1s both ease-in;
+animation:slideOutDown 1s both ease-in;
+
+
+
+
 
 
 

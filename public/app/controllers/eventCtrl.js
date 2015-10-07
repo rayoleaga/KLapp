@@ -24,8 +24,9 @@ angular.module('eventCtrl', ['eventService'])
 	Event.flickr()
 		.success(function(data){
 			vm.flickr = data;
-		console.log(vm.flickr)
+		//console.log(vm.flickr)
 		})
+
 
 
 })
