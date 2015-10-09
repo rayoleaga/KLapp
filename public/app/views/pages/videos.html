@@ -1,14 +1,14 @@
 <div class="container ">
-	<div class="video-player">
-		<!-- <img ng-src="{{mainImage}}"> -->
-		<iframe width="480" height="360" ng-src="youtubeUrl"></iframe>
+	<div class="video-player" ng-bind-html="youtubeUrl">
+		<p>{{youtubeUrl}}</p>
+		
 	</div>
 	<div id="videos-list">
 		<div id="video-title">
-			<ul ng-repeat="video in klVidInfo">
+			<ul ng-repeat="video in klVidInfo" id="videoUl">
 				<li id="video-title-container">
 					<span class="fa fa-play-circle"></span>
-					<p ng-click="videoChange(video.snippet.thumbnails.high.url)"> {{ video.snippet.title }} </p>
+					<p ng-click="videoChange(video.id.videoId)"> {{ video.snippet.title }} </p>
 					<!-- <img ng-src="{{ title.snippet.thumbnails.default.url }}"> -->
 				</li>
 			</ul>

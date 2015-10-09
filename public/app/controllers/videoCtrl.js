@@ -1,58 +1,31 @@
 	
-angular.module('videoCtrl', ['videoService'])
+angular.module('videoCtrl', ['videoService', 'ngSanitize'])
 
-.controller('videoController', function($scope, Video) {
+.controller('videoController',[ '$scope', '$templateCache', '$sce', 'Video',
+	function($scope, $templateCache, $sce, Video) {
 
 	var vm = this;
 
-
-
-	// Video.channelInfo()
-	// 	.success(function(data) {
-	// 		vm.videos = data;
-	// 		$scope.channelInfo = data
-	// 		$scope.mainVideo = data.items[0].contentDetails.relatedPlaylists.uploads
-	// 		$scope.vidUrl = data.items;
-	// 		// console.log($scope.vidUrl)
-	// 		//console.log(vm.videos.items[0].contentDetails.relatedPlaylists.uploads);
-	// 		//console.log($scope.channelInfo.items[0].contentDetails.relatedPlaylists.uploads)
-
-
-	// 	})
-
-// // this is not the video info change to VIDEO
-// 	Video.videoInfo()
-// 		.success(function(data){
-// 			//vm.vidurl = data;
-// 			//console.log(vm.vidurl.items[0].snippet.vidurl);
-// 			$scope.video = data;
-// 			$scope.mainTitle = data.items[0].snippet.title;
-// 			$scope.videoImgUrl = data.items[0].snippet.thumbnails.high.url
-// 			//console.log($scope.video.items[0].snippet.thumbnails.high.url );
-
-// 			//var url = '<iframe width="480" height="360" src="https://www.youtube.com/embed/'+vm.vidurl.items[0].snippet.resourceId.videoId+'?showinfo=0"></iframe>';
-
-			
-		
-// 			})
 
  // KL search query
 
  	Video.klVid()
  		.success(function(data){
  			$scope.klVidInfo = data.items;
- 			$scope.mainImage = data.items[0].snippet.thumbnails.high.url;
- 			$scope.mainVideoId = data.items[0].id.videoId;
- 			$scope.youtubeUrl = "https://www.youtube.com/embed/"+$scope.mainVideoId;
- 			console.log($scope.youtubeUrl);
+ 			// $scope.mainImage = data.items[0].snippet.thumbnails.high.url;
+ 			// $scope.mainVideoId = data.items[0].id.videoId;
+ 			$scope.mainInfo = data;
+ 			$scope.vidId = data.items[0].id.videoId;
+ 			$scope.youtubeUrl = $sce.trustAsHtml('<iframe width="480" height="360" src="https://www.youtube.com/embed/'+$scope.vidId+'?showinfo=0" frameborder="0" allowfullscreen></iframe>');
+ 			//console.log($scope.mainInfo);
  		})		
 
 		
 
 		$scope.videoChange = function(url){
-			$scope.mainImage = url;
+			$scope.youtubeUrl = $sce.trustAsHtml('<iframe width="480" height="360" src="https://www.youtube.com/embed/'+url+'?showinfo=0" frameborder="0" allowfullscreen></iframe>');
 		}
-})
+}]);
 
 	
 			
