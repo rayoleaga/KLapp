@@ -88,29 +88,53 @@ h1,h2,h3,h4,h5,h6, p{
 }
 
 
-.video-player,
-#video-title {
+.video-player{
 	display: inline-block;
-	width: 40%;
 	vertical-align: top;
-	margin: 20px;
+	width: 40%;
+
 }
 
+/*#video-title{
+	display: inline-block;
+	vertical-align: top;
+	width: 40%;
+
+}*/
+
+#video-title span,
+#video-title p,
+#video-title img
+{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 20px;
+
+}
+	
+#video-title-container{
+	cursor: pointer;
+}
 
 #videos-list{
+	display: inline-block;
+	width: 55%;
+	vertical-align: top;
 	overflow: scroll;
-	height: 360px;
+    height: 360px;
+    -webkit-box-shadow: inset 0px -48px 41px -51px rgba(26,26,26,0.33);
+    -moz-box-shadow: inset 0px -48px 41px -51px rgba(26,26,26,0.33);
+    box-shadow: inset 0px -48px 41px -51px rgba(26,26,26,0.33);
+   
 
 -webkit-box-shadow: inset 0px -48px 41px -51px rgba(26,26,26,0.33);
 -moz-box-shadow: inset 0px -48px 41px -51px rgba(26,26,26,0.33);
 box-shadow: inset 0px -48px 41px -51px rgba(26,26,26,0.33);
 }
 
-.video-player{
-	margin: 20px;
-	text-align: center;
-	
-}
+
+
+
 
 
 .main-container{
