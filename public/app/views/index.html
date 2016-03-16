@@ -47,7 +47,7 @@
 </head>
 <body ng-app="klApp" ng-controller="mainController as main">
 <!-- NAVBAR -->
-<header>
+<header ng-if="main.loggedIn">
 	<div class="navbar navbar-inverse" ng-if="main.loggedIn">
 	<div class="container">
 		<div class="navbar-header">
@@ -65,22 +65,7 @@
 	</div>
 </header>
 
-<div class="dark-container">
-<div class="container menu-icon-header-container">
-	<span class="fa fa-bars" id="menu-icon"></span>
-</div>
-	<h2>KELLEY LENNON</h2>
-</div>
-	<!-- menu sidebar -->
-<div class="kl-nav-container" id="menu-sidebar">
-<i class="fa fa-times" id="close-menubar"></i>
-	<ul class="main-menu">
-		<li><a href="/events"><i class="fa fa-calendar-o"></i></a></li>
-		<li><a href="/photos"><i class="fa fa-camera"></i></a></li>
-		<li><a href="/videos"><i class="fa fa-play-circle"></i></a></li>
-		<li><i class="fa fa-headphones"></i></li>
-	</ul>
-</div>
+
 
 
 	<!-- ANGULAR VIEWS -->
