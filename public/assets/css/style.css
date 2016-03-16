@@ -66,13 +66,14 @@
 	margin: 0 auto;
 }
 
+
 #menu-icon-topline {
-	transform: rotate(-45deg);
+	/*transform: rotate(-45deg);*/
 }
 
 
 #menu-icon-bottomline {
-	transform: rotate(45deg);
+	/*transform: rotate(45deg);*/
 }
 
 
@@ -96,6 +97,15 @@ animation:slideInUp 1s both ease-in;
 animation:slideOutDown 1s both ease-in;
 
 }
+
+
+/*login spinner animation*/
+.fa-spinner {
+	color: #fff;
+	font-size: 1.4em;
+}
+
+
 
 /*for GTxcel documentation CE*/
 pre{
