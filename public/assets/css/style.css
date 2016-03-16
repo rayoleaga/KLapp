@@ -1,7 +1,86 @@
-.container, .navbar,
-.navbar-inverse,
+/*main header*/
+.main-header{
+	background-color: #CC0016;
+	height: 112px;
+	margin: 0 auto 125px;
+	padding: 20px; 
+	text-align: center;
+}
+
+.main-profile-img{
+	width: 135px;
+	height: 135px;
+	border: 6px solid #fff;
+	background-color: grey;
+	border-radius: 50%;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+	top: 23px;
+}
+
+
+
+.main-menu-icon-container
+{
+	width: 40px;
+	height: 40px;
+	background-color: #CC0016;
+	border-radius: 50%;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+	top: -4px;
+	padding-top: 15px;
+	cursor: pointer;
+
+}
+
+.footer-menu-container{
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+	position: fixed;
+	bottom: 40px;
+	width: 100%;
+}
+.footer-menu-main-icon
+{
+	width: 40px;
+	height: 40px;
+	background-color: #CC0016;
+	border-radius: 50%;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 15px;
+	cursor: pointer;
+
+}
+
+
+.menu-icon-line {
+	border-top: 2px solid #fff;
+	width: 20px;
+	height: 10px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#menu-icon-topline {
+	transform: rotate(-45deg);
+}
+
+
+#menu-icon-bottomline {
+	transform: rotate(45deg);
+}
+
+
+
+.dashboard-header
  {
-	background-color: #CC0016 !important;
+	background-color: #353333 !important;
+	color: #fff;
 }
 #event-animation { position:relative; }
 
@@ -16,7 +95,13 @@ animation:slideInUp 1s both ease-in;
 -moz-animation:slideOutDown 1s both ease-in;
 animation:slideOutDown 1s both ease-in;
 
+}
 
+/*for GTxcel documentation CE*/
+pre{
+	background-color: black;
+	color: white;
+}
 
 
 
