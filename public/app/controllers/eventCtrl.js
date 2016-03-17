@@ -13,6 +13,12 @@ angular.module('eventCtrl', ['eventService'])
 			// console.log(vm.events);
 		})
 
+		Event.getResume()
+			.success(function(data){
+				vm.resume = data;
+				console.log(data.title);
+			})
+
 	// Event.weather()
 	// 	.success(function(data){
 

@@ -10,6 +10,10 @@ angular.module('eventService', [])
 			return $http.get('/api/all-events');
 		}
 
+		eventFactory.getResume = function(){
+			return $http.get('/resume');
+		}
+
 		// 	eventFactory.weather = function(){
 		// 	return $http.get('http://api.openweathermap.org/data/2.5/weather?q=providence&units=imperial');
 		// }
