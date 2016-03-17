@@ -15,6 +15,7 @@ angular.module('mainCtrl', [])
 		Auth.getUser()
 			.then(function(data){
 				vm.user = data.data;
+				
 			});
 	});
 
@@ -44,7 +45,7 @@ angular.module('mainCtrl', [])
 		Auth.logout();
 		vm.user = '';
 		
-		$location.path('/login');
+		$location.path('/admin');
 	};
 
 	vm.createSample = function() {

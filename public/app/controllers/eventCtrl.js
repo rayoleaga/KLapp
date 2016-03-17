@@ -13,19 +13,25 @@ angular.module('eventCtrl', ['eventService'])
 			// console.log(vm.events);
 		})
 
-	Event.weather()
-		.success(function(data){
+		Event.getResume()
+			.success(function(data){
+				vm.resume = data;
+				console.log(vm.resume[0].name);
+			})
 
-			vm.weather = data;
-			vm.weather.main.temp = Math.floor(vm.weather.main.temp);
+	// Event.weather()
+	// 	.success(function(data){
+
+	// 		vm.weather = data;
+	// 		vm.weather.main.temp = Math.floor(vm.weather.main.temp);
 			 
-		})
+	// 	})
 
-	Event.flickr()
-		.success(function(data){
-			vm.flickr = data;
-		//console.log(vm.flickr)
-		})
+	// Event.flickr()
+	// 	.success(function(data){
+	// 		vm.flickr = data;
+	// 	//console.log(vm.flickr)
+	// 	})
 
 
 

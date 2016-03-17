@@ -1,190 +1,105 @@
-h1,h2,h3,h4,h5,h6, p{
-	font-family: 'Palanquin', sans-serif;
-}
-
-.med-container{
-	
-	margin: 0 auto;
-}
-
-.text-center{
+/*main header*/
+.main-header{
+	background-color: #CC0016;
+	height: 112px;
+	margin: 0 auto 125px;
+	padding: 20px; 
 	text-align: center;
 }
 
-/*MENU*/
-.menu-icon-header-container{
-	color: #fff;
-}
-.fa-bars{
-
-	text-align: right;
-	display: block;
-	margin: 20px auto;
-	font-size: 2.0em;
-	cursor: pointer;
-	z-index: 100;
-	position: absolute;
-	right: 20px
-	top:20px;
-}
-
-#close-menubar{
-	color: #fff;
-	font-size: 1.3em;
-	cursor: pointer;
-	background: #474545;
+.main-profile-img{
+	width: 135px;
+	height: 135px;
+	border: 6px solid #fff;
+	background-color: grey;
 	border-radius: 50%;
-	width: 30px;
-	height: 30px;
 	text-align: center;
-	padding-top: 5px;
-	margin-bottom: 40px;
-}
-
-.kl-nav-container{
-	display: inline-block;
-	width: 10%;
-	height: 100vh;
-	background-color: #343434;
-	color: #fff;
-	margin: 0px;
-	padding: 10px;
-	position: absolute;
-	right: 0px;
-	top: 0px;
-	
-}
-
-.main-menu{
 	margin: 0 auto;
-	text-align: center;
-	padding: 0px;
-}
-
-.main-menu li,
-#videos-list li{
-	
-	list-style-type: none;
-	border-bottom: 1px solid #474545;
-	
-}
-
-
-
-.fa-calendar-o,
-.fa-camera,
-.fa-play-circle,
-.fa-headphones{
-	font-size: 2.0em;
-	margin: 20px;
-	
-
-}
-
-/*///////VIDEOS///////*/
-
-#videos-list #video-title span.fa-play-circle{
-	color: red;
-}
-
-
-.video-player{
-	display: inline-block;
-	vertical-align: top;
-	width: 40%;
-
-}
-
-#videoUl {
-	margin: 0px !important;
-}
-
-#video-title span,
-#video-title p,
-#video-title img
-{
-	display: inline-block;
-	vertical-align: middle;
-	margin: 20px;
-
-}
-
-#video-title li:hover
-{
-	background-color: #fafafa;
-}
-
-
-	
-#video-title-container{
-	cursor: pointer;
-}
-
-#videos-list{
-	display: inline-block;
-	width: 55%;
-	vertical-align: top;
-	overflow: scroll;
-    height: 360px;
-    -webkit-box-shadow: inset 0px -48px 41px -51px rgba(26,26,26,0.33);
-    -moz-box-shadow: inset 0px -48px 41px -51px rgba(26,26,26,0.33);
-    box-shadow: inset 0px -48px 41px -51px rgba(26,26,26,0.33);
-   
-
--webkit-box-shadow: inset 0px -48px 41px -51px rgba(26,26,26,0.33);
--moz-box-shadow: inset 0px -48px 41px -51px rgba(26,26,26,0.33);
-box-shadow: inset 0px -48px 41px -51px rgba(26,26,26,0.33);
-}
-
-
-
-
-
-
-.main-container{
-	margin: 0 auto;
-	text-align: center;
-	width: 100%;
-}
-
-
-.dark-container{
-	background-color: #131112;
-	height: 500px;
-	width: 100%;
-	padding: 20px;
-	background-image: url(../img/KL-cover.jpg);
-	background-position: center;
+	position: relative;
+	top: 23px;
+	background: url('http://yourdesignbuddy.com/wp-content/uploads/2014/12/Ray-Oleaga-Freelance-web-designer.jpg');
 	background-repeat: no-repeat;
-	display: inline-block;
+	background-position: center center;
+	background-size: cover;
 
-	-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 89%, 53% 89%, 50% 93%, 47% 89%, 0 89%);
-	clip-path: polygon(0% 0%, 100% 0%, 100% 89%, 53% 89%, 50% 93%, 47% 89%, 0 89%);
 }
 
 
 
-.dark-container h2{
-	color: #fff;
+.main-menu-icon-container
+{
+	width: 40px;
+	height: 40px;
+	background-color: #CC0016;
+	border-radius: 50%;
+	text-align: center;
 	margin: 0 auto;
-	text-align: center;
-	letter-spacing: 10px;
-	margin-top: 200px;
+	position: relative;
+	top: -4px;
+	padding-top: 15px;
+	cursor: pointer;
 
 }
 
-
-.calendar-container{
-
-	margin: 100px auto;
-	text-align: center;
-	display: inline-block;
-	vertical-align: top;
-	/* margin-right: 40px; */
-	border-right: 1px solid #131112;
-
+.footer-menu-container{
+	margin: 0 auto;
 	padding: 20px;
+	text-align: center;
+	position: fixed;
+	bottom: 40px;
+	width: 100%;
 }
+.footer-menu-main-icon
+{
+	width: 40px;
+	height: 40px;
+	background-color: #CC0016;
+	border-radius: 50%;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 15px;
+	cursor: pointer;
+
+}
+
+
+.menu-icon-line {
+	border-top: 2px solid #fff;
+	width: 20px;
+	height: 10px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+#menu-icon-topline {
+	/*transform: rotate(-45deg);*/
+}
+
+
+#menu-icon-bottomline {
+	/*transform: rotate(45deg);*/
+}
+
+
+
+.dashboard-header
+ {
+	background-color: #353333 !important;
+	color: #fff;
+}
+
+/*containers*/
+.main-container{
+	max-width: 960px;
+	margin:0 auto;
+	padding: 20px;
+
+}
+
+
+
+
 
 #event-animation { position:relative; }
 
@@ -198,6 +113,15 @@ animation:slideInUp 1s both ease-in;
 -webkit-animation:slideOutDown 1s both ease-in;
 -moz-animation:slideOutDown 1s both ease-in;
 animation:slideOutDown 1s both ease-in;
+
+}
+
+
+/*login spinner animation*/
+.fa-spinner {
+	color: #fff;
+	font-size: 1.4em;
+}
 
 
 

@@ -11,16 +11,22 @@ angular.module('app.routes', ['ngRoute'])
 			controllerAs: 'event'
 		})
 
-		.when('/login',{
-			templateUrl: 'app/views/pages/login.html',
+		.when('/admin',{
+			templateUrl: 'app/views/pages/admin.html',
 			controller: 'mainController',
-			controllerAs: 'login'
+			controllerAs: 'admin'
 		})
 
 		.when('/events',{
 			templateUrl:'app/views/pages/home.html',
 			controller: 'eventController',
 			controllerAs: 'event'
+		})
+
+		.when('/resume',{
+			templateUrl: 'app/views/pages/resume.html',
+			controller: 'resumeController',
+			controllerAs: 'resume'
 		})
 
 		.when('/videos',{
@@ -42,9 +48,21 @@ angular.module('app.routes', ['ngRoute'])
 				// show all users
 		.when('/users', {
 			templateUrl: 'app/views/pages/users/all.html',
-			controller: 'eventController',
+			controller: 'userController',
+			controllerAs: 'user'
 
-			controllerAs: 'event'
+		})
+		// create
+		.when('/users/create', {
+			templateUrl: 'app/views/pages/users/single.html',
+			controller: 'userCreateController',
+			controllerAs: 'user'
+		})
+		// update
+		.when('/users/:user_id', {
+			templateUrl: 'app/views/pages/users/single.html',
+			controller: 'userEditController',
+			controllerAs: 'user'
 		})
 
 
