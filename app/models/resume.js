@@ -11,9 +11,11 @@ var ResumeSchema = new mongoose.Schema({
     toolbox: [String],
     experience:[String],
     education: [String]
+
+
     
 });
-// var things = ResumeSchema.index({field1: String, field2: String});
+
 
 
 module.exports = mongoose.model('Resume', ResumeSchema); 

@@ -23,7 +23,9 @@ module.exports = function(app, express){
 				resume.toolbox = req.body.toolbox;
 				resume.experience = req.body.experience;
 				resume.education = req.body.education;
-				resume.things = req.body.things;
+			
+					
+
 
 
 
