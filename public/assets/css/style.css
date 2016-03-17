@@ -17,6 +17,11 @@
 	margin: 0 auto;
 	position: relative;
 	top: 23px;
+	background: url('http://yourdesignbuddy.com/wp-content/uploads/2014/12/Ray-Oleaga-Freelance-web-designer.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+
 }
 
 
@@ -83,6 +88,19 @@
 	background-color: #353333 !important;
 	color: #fff;
 }
+
+/*containers*/
+.main-container{
+	max-width: 960px;
+	margin:0 auto;
+	padding: 20px;
+
+}
+
+
+
+
+
 #event-animation { position:relative; }
 
 .ng-enter, .ng-leave { width:100%; position:absolute; }
@@ -106,12 +124,6 @@ animation:slideOutDown 1s both ease-in;
 }
 
 
-
-/*for GTxcel documentation CE*/
-pre{
-	background-color: black;
-	color: white;
-}
 
 
 

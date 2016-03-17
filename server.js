@@ -7,6 +7,7 @@ var morgan = require('morgan');
 var mongoose = require('mongoose');
 var config = require('./config');
 var path = require('path');
+var Resume = require('./app/models/resume');
 
 
 // APP CONFIGURATION
@@ -32,6 +33,11 @@ app.use(express.static(__dirname + '/public'));
 // ROUTES FOR OUT API
 var apiRoutes = require('./app/routes/api')(app, express);
 app.use('/api', apiRoutes);
+
+
+var resumeRoutes = require('./app/routes/resume')(app, express);
+app.use('/my', resumeRoutes);
+
 
 app.get('*', function(req, res){
 	res.sendFile(path.join(__dirname + '/public/app/views/index.html'));

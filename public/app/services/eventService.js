@@ -11,7 +11,7 @@ angular.module('eventService', [])
 		}
 
 		eventFactory.getResume = function(){
-			return $http.get('/resume');
+			return $http.get('/my/resume');
 		}
 
 		// 	eventFactory.weather = function(){

@@ -25,6 +25,7 @@
 	<script src="app/controllers/eventCtrl.js"></script>
 	<script src="app/controllers/videoCtrl.js"></script>
 	<script src="app/controllers/photoCtrl.js"></script>
+	<script src="app/controllers/resumeCtrl.js"></script>
 
 	<!-- services -->
 	<script src="app/services/authService.js"></script>
@@ -32,6 +33,7 @@
 	<script src="app/services/eventService.js"></script>
 	<script src="app/services/videoService.js"></script>
 	<script src="app/services/photoService.js"></script>
+	<script src="app/services/resumeService.js"></script>
 
 	<!-- main Angular app files -->
 	<script src="app/app.routes.js"></script>
@@ -60,6 +62,7 @@
 				<li ng-if="!main.loggedIn"><a href="/login">Login</a></li>
 				<li ng-if="main.loggedIn" class="navbar-text">Hello {{ main.user.name }}!</li>
 				<li ng-if="main.loggedIn"><a href="#" ng-click="main.doLogout()">Logout</a></li>
+		
 			</ul>
 		</div>
 	</div>

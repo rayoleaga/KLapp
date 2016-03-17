@@ -7,10 +7,12 @@ angular.module('klApp',[
 	'eventCtrl',
 	'videoCtrl',
 	'photoCtrl',
+	'resumeCtrl',
 	'userService',
 	'eventService',
 	'videoService',
-	'photoService'
+	'photoService',
+	'resumeService'
 	])
 
 	// application configuration to integrate token into requests

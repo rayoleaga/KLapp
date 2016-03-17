@@ -16,7 +16,7 @@ angular.module('eventCtrl', ['eventService'])
 		Event.getResume()
 			.success(function(data){
 				vm.resume = data;
-				console.log(data.title);
+				console.log(vm.resume[0].name);
 			})
 
 	// Event.weather()

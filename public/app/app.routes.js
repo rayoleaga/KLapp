@@ -23,6 +23,12 @@ angular.module('app.routes', ['ngRoute'])
 			controllerAs: 'event'
 		})
 
+		.when('/resume',{
+			templateUrl: 'app/views/pages/resume.html',
+			controller: 'resumeController',
+			controllerAs: 'resume'
+		})
+
 		.when('/videos',{
 			templateUrl: 'app/views/pages/videos.html',
 			controller: 'videoController',
