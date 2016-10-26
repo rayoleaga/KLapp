@@ -1,4 +1,4 @@
-// grab the packages taht we need for the calendar model
+// grab the packages that we need for the calendar model
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var bcrypt = require ('bcrypt-nodejs');
